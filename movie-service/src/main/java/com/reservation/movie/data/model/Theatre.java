@@ -1,14 +1,10 @@
 package com.reservation.movie.data.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.annotation.Id;
 
 @Entity
 @Data
@@ -18,10 +14,11 @@ import org.springframework.data.annotation.Id;
 public class Theatre {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String theatreId;
+    private int theatreId;
     @Column(nullable = false, unique = true)
     private String name;
+    @Column(name= "locality", nullable = false)
     private String locality;
-    @Column(nullable = false)
+    @Column(name= "building_name", nullable = false)
     private String buildingName;
 }

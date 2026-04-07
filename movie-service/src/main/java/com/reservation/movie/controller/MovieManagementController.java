@@ -1,6 +1,6 @@
 package com.reservation.movie.controller;
 
-import com.reservation.movie.data.dto.MovieDTO;
+import com.reservation.movie.data.dto.Movie;
 import com.reservation.movie.service.MovieService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -17,8 +17,8 @@ public class MovieManagementController {
     private final MovieService movieService;
 
     @GetMapping
-    public ResponseEntity<List<MovieDTO>> getAllMovies() {
-        List<MovieDTO> movies = movieService.findAllMoviesWithShowTimes();
+    public ResponseEntity<List<Movie>> getAllMovies() {
+        List<Movie> movies = movieService.findAllMoviesWithShowTimes();
         return ResponseEntity.ok(movies);
     }
 

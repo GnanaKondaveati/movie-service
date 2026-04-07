@@ -4,18 +4,17 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ShowTimeDTO {
-    private String showtimeId;
+public class ShowTime {
+    private int showtimeId;
     private String theatreId;
-    private LocalDateTime startTime; // Represents the exact date and time
+    private ZonedDateTime startTime; // Represents the exact date and time
     private String screenName;
-    private Boolean showRunning;
+    private boolean showRunning;
     private int movieId;
 }

@@ -7,14 +7,9 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-public class TheatreDTO {
-
-    private String theatreId;
-    private String name;
-    private String locality;
-    private String buildingName;
+@NoArgsConstructor
+public class Genre {
+    private int genreId;
+    private String genreName;
 }
-
-

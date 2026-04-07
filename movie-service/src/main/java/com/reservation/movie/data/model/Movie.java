@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.annotation.Id;
 
 import java.util.List;
 import java.util.Set;
@@ -19,9 +18,13 @@ public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name = "movie_name", nullable = false)
     private String movieName;
+    @Column(name = "description", nullable = false)
     private String description;
+    @Column(name = "run_time_in_hrs", nullable = false)
     private int runTimeInHrs;
+    @Column(name = "poster_url", nullable = false)
     private String posterUrl;
 
     @ManyToMany
@@ -30,5 +33,6 @@ public class Movie {
             inverseJoinColumns = @JoinColumn(name = "genre_id"))
     private Set<Genre> genres;
     @OneToMany(mappedBy = "movie")
+    @Column(name ="show_times")
     private List<ShowTime> showTimes;
 }

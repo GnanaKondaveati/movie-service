@@ -5,9 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.annotation.Id;
 
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 @Entity
 @Data
@@ -17,7 +16,7 @@ import java.time.LocalDateTime;
 public class ShowTime {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private int id;
 
     @ManyToOne
     @JoinColumn(name = "movie_id")
@@ -26,7 +25,8 @@ public class ShowTime {
     @ManyToOne
     @JoinColumn(name = "theatre_id")
     private Theatre theatre;
-
-    private LocalDateTime startTime;
+    @Column(name="start_time", nullable = false)
+    private OffsetDateTime startTime;
+    @Column(name="show_running", nullable = false)
     private boolean showRunning;
 }

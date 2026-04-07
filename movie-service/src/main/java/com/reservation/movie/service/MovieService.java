@@ -1,10 +1,10 @@
 package com.reservation.movie.service;
 
-import com.reservation.movie.data.dto.MovieDTO;
+import com.reservation.movie.data.dto.Movie;
 
 import java.util.List;
 
 public interface MovieService {
-    List<MovieDTO> getMoviesByGenre(String name);
-    List<MovieDTO> findAllMoviesWithShowTimes();
+    List<Movie> getMoviesByGenre(String name);
+    List<Movie> findAllMoviesWithShowTimes();
 }
