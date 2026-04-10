@@ -20,10 +20,8 @@ public class SecurityConfig {
     public SecurityFilterChain config(HttpSecurity http) {
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authorize ->
-                        authorize.requestMatchers("/auth/**", "/swagger-ui/**")
-                                .permitAll()
-                                .anyRequest()
-                                .authenticated()
+                        authorize.requestMatchers("/auth/**", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
+                                .anyRequest().authenticated()
                 ).sessionManagement(session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                //custom authenticationProvider/Manager

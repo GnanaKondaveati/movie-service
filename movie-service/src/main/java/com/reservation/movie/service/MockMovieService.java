@@ -3,7 +3,7 @@ package com.reservation.movie.service;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import com.reservation.movie.data.model.Movie;
+import com.reservation.movie.data.entity.Movie;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
 

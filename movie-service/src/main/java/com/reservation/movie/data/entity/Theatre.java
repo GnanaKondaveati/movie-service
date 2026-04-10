@@ -1,4 +1,4 @@
-package com.reservation.movie.data.model;
+package com.reservation.movie.data.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

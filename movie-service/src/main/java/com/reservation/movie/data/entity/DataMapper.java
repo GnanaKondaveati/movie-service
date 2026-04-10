@@ -1,4 +1,4 @@
-package com.reservation.movie.data.model;
+package com.reservation.movie.data.entity;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -12,9 +12,9 @@ import java.util.stream.Collectors;
 public interface DataMapper {
 
     @Mapping(target = "genres", source = "genres",qualifiedByName = "mapGenres")
-    com.reservation.movie.data.dto.Movie toDto(com.reservation.movie.data.model.Movie movie);
+    com.reservation.movie.data.dto.Movie toDto(com.reservation.movie.data.entity.Movie movie);
 
-    List<com.reservation.movie.data.dto.Movie> toDtoList(List<com.reservation.movie.data.model.Movie> movies);
+    List<com.reservation.movie.data.dto.Movie> toDtoList(List<com.reservation.movie.data.entity.Movie> movies);
  //add doc
     @Named("mapGenres")
     default List<String> mapGenres(Set<Genre> genres) {
