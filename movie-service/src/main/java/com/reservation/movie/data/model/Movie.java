@@ -29,7 +29,7 @@ public class Movie {
 
     @ManyToMany
     @JoinTable(name = "movie_genres",
-            joinColumns = @JoinColumn(name = "movie_id"),
+            joinColumns = @JoinColumn(name = "id"),
             inverseJoinColumns = @JoinColumn(name = "genre_id"))
     private Set<Genre> genres;
     @OneToMany(mappedBy = "movie")

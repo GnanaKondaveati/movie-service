@@ -15,6 +15,7 @@ import lombok.RequiredArgsConstructor;
 public class Genre {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="genre_id")
     private int genreId;
 
     @Column(nullable = false, unique = true)

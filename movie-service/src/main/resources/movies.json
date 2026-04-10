@@ -1,0 +1,84 @@
+[
+  {
+    "id": 1,
+    "movieName": "Inception",
+    "description": "A thief who steals corporate secrets through the use of dream-sharing technology.",
+    "runTimeInHrs": 2,
+    "posterUrl": "http://example.com/inception.jpg",
+    "genres": [
+      { "genreId": 1, "genreName": "Sci-Fi" },
+      { "genreId": 2, "genreName": "Action" }
+    ],
+    "showTimes": [
+      {
+        "id": 101,
+        "startTime": "2026-04-10T14:30:00+05:30",
+        "showRunning": true,
+        "theatre": {
+          "theatreId": 1,
+          "name": "Grand Screen IMAX",
+          "locality": "Downtown",
+          "buildingName": "The Zenith Tower"
+        }
+      },
+      {
+        "id": 102,
+        "startTime": "2026-04-10T19:00:00+05:30",
+        "showRunning": true,
+        "theatre": {
+          "theatreId": 2,
+          "name": "Starlight Cinemas",
+          "locality": "Westside",
+          "buildingName": "Orion Mall"
+        }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "movieName": "The Dark Knight",
+    "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham.",
+    "runTimeInHrs": 2,
+    "posterUrl": "http://example.com/darkknight.jpg",
+    "genres": [
+      { "genreId": 2, "genreName": "Action" },
+      { "genreId": 3, "genreName": "Drama" }
+    ],
+    "showTimes": [
+      {
+        "id": 201,
+        "startTime": "2026-04-10T21:30:00+05:30",
+        "showRunning": true,
+        "theatre": {
+          "theatreId": 1,
+          "name": "Grand Screen IMAX",
+          "locality": "Downtown",
+          "buildingName": "The Zenith Tower"
+        }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "movieName": "Interstellar",
+    "description": "A team of explorers travel through a wormhole in space.",
+    "runTimeInHrs": 3,
+    "posterUrl": "https://image.url/interstellar.jpg",
+    "genres": [
+      { "genreId": 1, "genreName": "Sci-Fi" }
+    ],
+    "showTimes": [
+      {
+        "id": 301,
+        "startTime": "2026-04-10T18:00:00+02:00",
+        "showRunning": true,
+        "theatre": {
+          "theatreId": 1,
+          "name": "PVR Cinemas",
+          "locality": "Skyline Mall",
+          "buildingName": "Block A"
+        }
+      }
+    ]
+  }
+]

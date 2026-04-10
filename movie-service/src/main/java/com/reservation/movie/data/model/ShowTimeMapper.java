@@ -1,6 +1,5 @@
 package com.reservation.movie.data.model;
 
-import com.reservation.movie.data.dto.ShowTime;
 import org.mapstruct.Mapper;
 
 import java.time.OffsetDateTime;
