@@ -1,7 +1,7 @@
-package com.reservation.movie.config;
+package com.reservation.movie.service;
 
 import com.reservation.movie.data.entity.User;
-import com.reservation.movie.data.repository.UserRepository;
+import com.reservation.movie.repository.UserRepository;
 import org.jspecify.annotations.NullMarked;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
@@ -35,23 +35,5 @@ public class CustomUserDetailsService implements UserDetailsService {
                 user.getPassword(),
                 List.of(new SimpleGrantedAuthority("ROLE_USER"))
         );
-    }
-
-
-    //test-user
-    @Bean
-    CommandLineRunner init(UserRepository repo, PasswordEncoder encoder) {
-        return args -> {
-
-            if (repo.findByUsername("admin").isEmpty()) {
-
-                User user = new User();
-                user.setUsername("admin");
-                user.setPassword(encoder.encode("admin123"));
-                user.setRoles("USER");
-
-                repo.save(user);
-            }
-        };
     }
 }

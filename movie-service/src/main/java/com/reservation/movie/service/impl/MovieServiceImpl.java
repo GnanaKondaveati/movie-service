@@ -2,7 +2,7 @@ package com.reservation.movie.service.impl;
 
 import com.reservation.movie.data.dto.Movie;
 import com.reservation.movie.data.entity.DataMapper;
-import com.reservation.movie.data.repository.MovieRepository;
+import com.reservation.movie.repository.MovieRepository;
 import com.reservation.movie.exception.MovieNotFoundException;
 import com.reservation.movie.service.MockMovieService;
 import com.reservation.movie.service.MovieService;

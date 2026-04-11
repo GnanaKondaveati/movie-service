@@ -1,4 +1,4 @@
-package com.reservation.movie.data.repository;
+package com.reservation.movie.repository;
 
 import com.reservation.movie.data.entity.Movie;
 import org.springframework.data.jpa.repository.JpaRepository;

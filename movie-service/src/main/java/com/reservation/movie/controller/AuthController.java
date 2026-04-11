@@ -3,6 +3,7 @@ package com.reservation.movie.controller;
 import com.reservation.movie.data.dto.AuthRequest;
 import com.reservation.movie.service.JwtService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -22,7 +23,7 @@ public class AuthController {
     private final UserDetailsService userDetailsService;
 
     @PostMapping("/login")
-    public String login(@RequestBody AuthRequest request) {
+    public ResponseEntity<?> login(@RequestBody AuthRequest request) {
 
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
@@ -34,6 +35,6 @@ public class AuthController {
         UserDetails userDetails =
                 userDetailsService.loadUserByUsername(request.username());
 
-        return jwtService.generateToken(userDetails);
+        return ResponseEntity.ok(jwtService.generateToken(userDetails));
     }
 }
