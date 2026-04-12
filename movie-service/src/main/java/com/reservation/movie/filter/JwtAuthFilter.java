@@ -40,7 +40,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             return;
         }
 
-        if (request.getMethod().equals("OPTIONS")) {
+        if (request.getMethod().equalsIgnoreCase("OPTIONS")) {
             filterChain.doFilter(request, response);
             return;
         }
