@@ -40,6 +40,11 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             return;
         }
 
+        if (request.getMethod().equals("OPTIONS")) {
+            filterChain.doFilter(request, response);
+            return;
+        }
+
         try {
             String jwt = header.substring(7).trim();
 
