@@ -21,7 +21,9 @@ public class SecurityConfig {
     public SecurityFilterChain config(HttpSecurity http,
                                       AuthenticationProvider authenticationprovider,
                                       JwtAuthFilter jwtAuthFilter) {
-        http.csrf(AbstractHttpConfigurer::disable)
+        http
+                .cors(cors -> {})
+                .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authorize ->
                         authorize.requestMatchers("/auth/**", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
                                 .anyRequest().authenticated()
