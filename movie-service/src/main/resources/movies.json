@@ -4,7 +4,7 @@
     "movieName": "Inception",
     "description": "A thief who steals corporate secrets through the use of dream-sharing technology.",
     "runTimeInHrs": 2,
-    "posterUrl": "http://example.com/inception.jpg",
+    "posterUrl": "https://image.tmdb.org/t/p/original/gqgwNjwjSqGkOqkE2rppogenu4v.jpg",
     "genres": [
       { "genreId": 1, "genreName": "Sci-Fi" },
       { "genreId": 2, "genreName": "Action" }
@@ -39,7 +39,7 @@
     "movieName": "The Dark Knight",
     "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham.",
     "runTimeInHrs": 2,
-    "posterUrl": "http://example.com/darkknight.jpg",
+    "posterUrl": "https://image.tmdb.org/t/p/original/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
     "genres": [
       { "genreId": 2, "genreName": "Action" },
       { "genreId": 3, "genreName": "Drama" }
@@ -63,7 +63,7 @@
     "movieName": "Interstellar",
     "description": "A team of explorers travel through a wormhole in space.",
     "runTimeInHrs": 3,
-    "posterUrl": "https://image.url/interstellar.jpg",
+    "posterUrl": "https://image.tmdb.org/t/p/original/yQvGrMoipbRoddT0ZR8tPoR7NfX.jpg",
     "genres": [
       { "genreId": 1, "genreName": "Sci-Fi" }
     ],
