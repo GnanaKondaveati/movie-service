@@ -18,6 +18,15 @@ public class JwtService {
     @Value("${security.jwt.key}")
     private String secretKey;
 
+    public String generateToken(UserDetails userDetails) {
+        return Jwts.builder()
+                .subject(userDetails.getUsername())
+                .issuedAt(new Date())
+                .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60)) // 1 hour
+                .signWith(getSignInKey())
+                .compact();
+    }
+
     public boolean isTokenValid(String token, UserDetails userDetails) {
         final String userName = extractUserName(token);
         return (userName.equals(userDetails.getUsername()) && !isTokenExpired(token));
