@@ -36,7 +36,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
         try {
             String path = request.getRequestURI();
             if ("OPTIONS".equalsIgnoreCase(request.getMethod())
-                    || path.startsWith("/auth")) { //JWT filter should not try to validate token on login request.(/auth api)
+                    || path.startsWith("/api/v1/auth")) { //JWT filter should not try to validate token on login request.(/auth api)
                 filterChain.doFilter(request, response);
                 return;
             }
